@@ -72,10 +72,10 @@ def list_files():
     for subdir, dirs, files in os.walk(rootdir + '/app/static/uploads'):
         for file in files:
             
-            if file[-3:].lower == 'jpg':
-                images.append(os.path.join(subdir, file))
+            if file[-4:] == '.jpg':
+                images.append(os.path.join(file))
             else:
-                filelist.append(os.path.join(subdir, file))
+                filelist.append(os.path.join(file))
                 
     
     return render_template('filelisting.html', images = images, files = filelist)

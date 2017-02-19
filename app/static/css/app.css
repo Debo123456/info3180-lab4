@@ -6,3 +6,14 @@ body {
   width: 600px;
   margin: 0 auto;
 }
+
+.image-container {
+  width: 100%;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.image-container img {
+  max-width: 200px;
+}
